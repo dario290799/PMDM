@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:padding="@dimen/pad_gen"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <ImageView
+        android:layout_width="@dimen/tam_img_adap"
+        android:layout_height="@dimen/tam_img_adap"
+        android:src=""
+        android:id="@+id/imagen_marca_fila">
+
+    </ImageView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text=""
+        android:gravity="center"
+        android:id="@+id/texto_marca_fila">
+
+    </TextView>
+
+</LinearLayout>

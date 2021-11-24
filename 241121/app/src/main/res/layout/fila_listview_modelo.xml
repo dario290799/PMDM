@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/pad_gen"
+    >
+    <ImageView
+        android:layout_width="@dimen/tam_img_fila_adap"
+        android:layout_height="@dimen/tam_img_fila_adap"
+        android:src=""
+        android:id="@+id/imagen_modelo_fila">
+
+    </ImageView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text=""
+        android:gravity="center"
+        android:id="@+id/texto_modelo_fila">
+
+    </TextView>
+
+</LinearLayout>
