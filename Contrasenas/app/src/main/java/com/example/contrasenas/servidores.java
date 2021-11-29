@@ -40,11 +40,11 @@ public class servidores extends AppCompatActivity {
                 try {
                     Socket clienteSocket = new Socket(numeroIp, numeroPuerto);
                     PrintWriter out = new PrintWriter(clienteSocket.getOutputStream(), true);
-                    estadoTcp.setText("Puerto TCP " + numeroPuerto + " abierto");
+                    estadoTcp.setText("Puerto " + numeroPuerto + " esta abierto");
                     out.close();
                     clienteSocket.close();
                 } catch (IOException e) {
-                    estadoTcp.setText("Puerto TCP " + numeroPuerto + " cerrado");
+                    estadoTcp.setText("Puerto " + numeroPuerto + " esta cerrado");
                 }
             }
         });
