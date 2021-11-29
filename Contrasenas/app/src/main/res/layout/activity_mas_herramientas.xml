@@ -26,35 +26,19 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginHorizontal="40dp"
             android:gravity="center"
-            android:text="Generador"
+            android:text="@string/generador"
+            android:textColor="#f5e6e8" />
+        <Button
+            android:id="@+id/paginaServidores"
+            android:layout_width="90dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="40dp"
+            android:gravity="center"
+            android:text="@string/tcp"
             android:textColor="#f5e6e8" />
 
-        <EditText
-            android:id="@+id/servidorText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text=""
-            android:hint="IP"
-            android:layout_marginTop="40dp"
-            android:gravity="center"
-            android:layout_marginHorizontal="80dp"/>
 
-        <Button
-            android:id="@+id/ping"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Comprobar Estado Servidor"
-            android:layout_margin="40dp"/>
-
-        <TextView
-            android:id="@+id/estadoServidor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:gravity="center"
-            android:layout_marginHorizontal="80dp"/>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

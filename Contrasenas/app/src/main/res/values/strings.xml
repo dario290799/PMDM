@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Contrasenas</string>
+    <string name="generador">Generador</string>
+    <string name="comprobar_puerto_tcp">Comprobar puerto TCP</string>
+    <string name="puerto">Puerto</string>
+    <string name="tu_ip">Tu IP</string>
+    <string name="tcp">Tcp</string>
 </resources>

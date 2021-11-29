@@ -2,45 +2,44 @@ package com.example.contrasenas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import org.apache.http.params.HttpConnectionParams;
+
 
 import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.InetAddress;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.UnknownHostException;
+import java.io.PrintWriter;
+import java.net.Socket;
+
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.NoSuchAlgorithmException;
 
 public class MasHerramientas extends AppCompatActivity {
-    private Button generador;
+    private Button generador,paginaServidores;
     private TextView textgenerador;
     private KeyPairGenerator key;
-    private EditText servidorText;
-    private Button ping;
-    private TextView estadoServidor;
-    private URL urlServidor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mas_herramientas);
+        instancias();
+        generadorCon();
+        paginaServidor();
+
+    }
+
+    private void instancias() {
         generador = (Button) findViewById(R.id.generador);
         textgenerador = (TextView) findViewById(R.id.textGenerador);
-        servidorText = (EditText) findViewById(R.id.servidorText);
-        ping = (Button) findViewById(R.id.ping);
-        estadoServidor = (TextView) findViewById(R.id.estadoServidor);
-        generadorCon();
-        PingServidor();
+        paginaServidores = (Button) findViewById(R.id.paginaServidores);
+
     }
 
     private void generadorCon() {
@@ -63,29 +62,13 @@ public class MasHerramientas extends AppCompatActivity {
             }
         });
     }
-
-    private void PingServidor() {
-        ping.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                HttpURLConnection connection = null;
-                String urlString = servidorText.toString();
-                try {
-                    urlServidor = new URL(urlString);
-                    connection = (HttpURLConnection) urlServidor.openConnection();
-                    connection.setRequestMethod("HEAD");
-                    int code = connection.getResponseCode();
-                    estadoServidor.setText(" "+code);
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } finally { if (connection != null) {
-
-                        connection.disconnect();
-                    }
-                }
+    private void paginaServidor(){
+        paginaServidores.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MasHerramientas.this,servidores.class));
             }
         });
     }
+
 }

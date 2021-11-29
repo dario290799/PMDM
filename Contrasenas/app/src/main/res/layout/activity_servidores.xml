@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".servidores"
+    android:gravity="center">
+    <EditText
+        android:id="@+id/puertoText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/puerto"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text=""
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/ipText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/tu_ip"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text=""
+        android:autofillHints="" />
+    <Button
+        android:id="@+id/tcpBoton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/comprobar_puerto_tcp"
+        android:layout_margin="40dp"/>
+
+    <TextView
+        android:id="@+id/estadoTcp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:gravity="center"
+        android:layout_marginHorizontal="80dp"/>
+
+</LinearLayout>

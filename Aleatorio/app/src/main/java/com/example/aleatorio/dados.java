@@ -17,18 +17,24 @@ public class dados extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dados);
-        tirarDados=(Button) findViewById(R.id.tirarDados);
-        imageDado=(ImageView) findViewById(R.id.imageDado);
+        instancias();
+        acciones();
+    }
+
+    private void instancias() {
+        tirarDados = (Button) findViewById(R.id.tirarDados);
+        imageDado = (ImageView) findViewById(R.id.imageDado);
         dados = new int[]{R.drawable.dado_uno, R.drawable.dado_dos, R.drawable.dado_tres,
                 R.drawable.dado_cuatro, R.drawable.dado_cinco, R.drawable.dado_seis};
     }
-    public void dadoRamdom(){
+    private void acciones(){
         tirarDados.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dadoActual = (int) (Math.random()*6);
+                dadoActual = (int) (Math.random() * 6);
                 imageDado.setImageResource(dados[dadoActual]);
             }
         });
     }
+
 }

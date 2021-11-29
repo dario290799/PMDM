@@ -23,13 +23,19 @@ public class copa extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_copa);
+        instancias();
+        agregarNombre();
+        generarGanador();
+    }
+
+    private void instancias() {
         nombre=(EditText) findViewById(R.id.nombre);
         ganador=(Button) findViewById(R.id.ganador);
         concursante=(Button) findViewById(R.id.concursante);
         nombreGanador=(TextView)findViewById(R.id.nombreGanador);
-        agregarNombre();
-        generarGanador();
+
     }
+
     public void agregarNombre(){
         concursante.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,8 +50,9 @@ public class copa extends AppCompatActivity {
         ganador.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String rand = nombreCandidatos.get(new Random().nextInt(nombreCandidatos.size()));
-                nombreGanador.setText(rand);
+                Random rand = new Random();
+                String random = nombreCandidatos.get(new Random().nextInt(nombreCandidatos.size()));
+                nombreGanador.setText(random);
             }
         });
     }

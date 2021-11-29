@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Contrasenas">
         <activity
+            android:name=".servidores"
+            android:exported="false" />
+        <activity
             android:name=".AnadirContrasenas"
             android:exported="true" />
         <activity
