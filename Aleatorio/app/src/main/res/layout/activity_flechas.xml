@@ -15,51 +15,70 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:textSize="30dp" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sin rango específico"
-        android:id="@+id/checkboxSinRango"/>
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Con rango específico"
-        android:id="@+id/checkboxConRango"/>
+        <RadioButton
+            android:id="@+id/checkboxSinRango"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sin rango específico" />
+
+        <RadioButton
+            android:id="@+id/checkboxConRango"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Con rango específico" />
+
+    </RadioGroup>
+    </LinearLayout>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <EditText
+            android:id="@+id/editextMinimo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
             android:hint="mínimo"
-            android:layout_marginRight="10dp"
-            android:id="@+id/editextMinimo"></EditText>
+            tools:ignore="TouchTargetSizeCheck"></EditText>
+
         <EditText
+            android:id="@+id/editextMaximo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="maximo"
             android:layout_marginRight="10dp"
-            android:id="@+id/editextMaximo"></EditText>
+            android:hint="maximo"
+            tools:ignore="TouchTargetSizeCheck"></EditText>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Permitir decimales"
-        android:id="@+id/checkboxPermitirDecimales"/>
-        <EditText
+
+        <CheckBox
+            android:id="@+id/checkboxPermitirDecimales"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Permitir decimales" />
+
+        <EditText
             android:id="@+id/editextDecimales"
-            android:hint="Cantidad decimales">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Cantidad decimales"
+            tools:ignore="TouchTargetSizeCheck">
 
         </EditText>
-</LinearLayout>
+    </LinearLayout>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -70,14 +89,21 @@
             android:text="Cantidad de numeros ">
 
         </TextView>
+
         <EditText
+            android:id="@+id/editextTotalNumeros"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/editextTotalNumeros"
+            android:layout_marginLeft="5dp"
             android:hint="Cantidad decimales"
-            android:layout_marginLeft="5dp">
+            tools:ignore="TouchTargetSizeCheck">
 
         </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        oa
     </LinearLayout>
 
 </LinearLayout>

@@ -8,14 +8,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Random;
 
 public class copa extends AppCompatActivity {
     private EditText nombre;
     private Button ganador, concursante;
-    private ArrayList<String> nombreCandidatos = new ArrayList<String>();
+    private final ArrayList<String> nombreCandidatos = new ArrayList<>();
     private String nombreString;
     private TextView nombreGanador;
 
@@ -40,9 +39,8 @@ public class copa extends AppCompatActivity {
         concursante.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                nombreString = nombre.toString();
-                nombreCandidatos.add(nombreString);
-                nombre.setText("");
+                nombreCandidatos.add(String.valueOf(nombre.getText()));
+                nombre.setText(null);
             }
         });
     }
@@ -50,9 +48,9 @@ public class copa extends AppCompatActivity {
         ganador.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Random rand = new Random();
-                String random = nombreCandidatos.get(new Random().nextInt(nombreCandidatos.size()));
-                nombreGanador.setText(random);
+                Random aleatorio = new Random();
+                String campeonString = nombreCandidatos.get(aleatorio.nextInt(nombreCandidatos.size()));
+                nombreGanador.setText(campeonString);
             }
         });
     }

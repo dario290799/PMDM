@@ -27,7 +27,8 @@
             android:layout_height="0dp"
             android:layout_weight="0.5"
             android:scaleType="fitXY"
-            android:src="@drawable/backgroudup"></ImageButton>
+            android:src="@drawable/backgroudup"
+            tools:ignore="SpeakableTextPresentCheck"></ImageButton>
 
         <ImageButton
             android:id="@+id/abajo"
@@ -35,7 +36,8 @@
             android:layout_height="0dp"
             android:layout_weight="0.5"
             android:scaleType="fitXY"
-            android:src="@drawable/backgrounddown"></ImageButton>
+            android:src="@drawable/backgrounddown"
+            tools:ignore="SpeakableTextPresentCheck"></ImageButton>
     </LinearLayout>
 
 </FrameLayout>
