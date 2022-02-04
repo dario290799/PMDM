@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Salir"
+        android:id="@+id/salir">
+    </item>
+
+    <item android:title="Categorias">
+        <menu>
+            <item android:title="Sport"
+                android:icon="@drawable/sp"
+                android:id="@+id/sport">
+            </item>
+            <item android:title="Television"
+                android:icon="@drawable/tv"
+                android:id="@+id/television">
+            </item>
+            <item android:title="Video Games"
+                android:icon="@drawable/vg"
+                android:id="@+id/videoGames">
+            </item>
+        </menu>
+    </item>
+
+</menu>
