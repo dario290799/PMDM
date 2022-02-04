@@ -20,10 +20,13 @@ import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.NoSuchAlgorithmException;
 
+import javax.crypto.Cipher;
+
 public class MasHerramientas extends AppCompatActivity {
-    private Button generador,paginaServidores;
-    private TextView textgenerador;
+    private Button generador,paginaServidores,hashButton;
+    private TextView textgenerador,resultadoHash;
     private KeyPairGenerator key;
+    private EditText hashEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,23 @@ public class MasHerramientas extends AppCompatActivity {
         instancias();
         generadorCon();
         paginaServidor();
+        ejemploHash();
+
+    }
+
+    private void ejemploHash() {
+        hashButton.setOnClickListener(new View.OnClickListener() {
+            String textoHash = hashEditText.toString();
+            char array[] = textoHash.toCharArray();
+            @Override
+            public void onClick(View view) {
+                for (int i = 0;i<array.length;i++){
+                    array[i] = (char) (array[i]+(char)5);
+                }
+                String encriptado = String.valueOf(array);
+                resultadoHash.setText(encriptado);
+            }
+        });
 
     }
 
@@ -39,6 +59,9 @@ public class MasHerramientas extends AppCompatActivity {
         generador = (Button) findViewById(R.id.generador);
         textgenerador = (TextView) findViewById(R.id.textGenerador);
         paginaServidores = (Button) findViewById(R.id.paginaServidores);
+        hashButton = (Button) findViewById(R.id.hashButton);
+        resultadoHash = (TextView) findViewById(R.id.resultadoHash);
+        hashEditText = (EditText) findViewById(R.id.hashEditText);
 
     }
 

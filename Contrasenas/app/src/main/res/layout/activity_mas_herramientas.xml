@@ -37,6 +37,34 @@
             android:gravity="center"
             android:text="@string/tcp"
             android:textColor="#f5e6e8" />
+        <EditText
+            android:id="@+id/hashEditText"
+            android:layout_width="251dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            />
+
+        <Button
+            android:id="@+id/hashButton"
+            android:layout_width="251dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Encript"
+            android:textColor="#f5e6e8" />
+        <TextView
+            android:id="@+id/resultadoHash"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:text=""
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"/>
 
 
 

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group>
+        <item android:title="Futbol"
+            android:id="@+id/item_futbol"
+            android:icon="@drawable/fubol_menu"
+            >
+
+        </item>
+        <item android:title="Series-Peliculas"
+            android:id="@+id/item_seriesPeliculas"
+            android:icon="@drawable/serie_menu"
+
+            >
+
+        </item>
+        <item android:title="Videojuegos"
+            android:id="@+id/item_videojuegos"
+            android:icon="@drawable/juego_menu"
+            >
+
+        </item>
+        <item android:title="Todos"
+            android:id="@+id/item_todos"
+            android:icon="@drawable/musica_menu"
+            >
+
+        </item>
+
+    </group>
+
+
+</menu>
